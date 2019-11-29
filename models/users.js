@@ -7,8 +7,7 @@
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 //自定义Schema
-let UserSchema = new Schema({
-
+let usersSchema = new Schema({
     //用户名
     username: {
         type: String,
@@ -51,5 +50,5 @@ let UserSchema = new Schema({
     },
 });
 //创建model,并实现外部接口 作用的集合为node数据库里的users(自动加“s”)
-let userModel = mongoose.model("user", UserSchema);
-module.exports = userModel;
+let usersModel = mongoose.model("user", usersSchema);
+module.exports = usersModel;
