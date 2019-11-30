@@ -46,7 +46,7 @@ let usersSchema = new Schema({
     //  创建时间
     create_at: {
         type: Number,
-        default: 0
+        default: new Date().getTime()
     },
 });
 //创建model,并实现外部接口 作用的集合为node数据库里的users(自动加“s”)

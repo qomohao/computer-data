@@ -49,7 +49,6 @@ let Users = {
         let modal = new usersModal({
             username: req.body.username,
             password: req.body.password,
-            create_at: new Date().getTime()
         });
         modal.save().then(data => {
             res.json({
